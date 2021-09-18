@@ -3,11 +3,11 @@
         <h3>基础用法</h3>
         <!-- <sakura-card> -->
         <s-button>default</s-button>
-        <s-button type="plain">primary</s-button>
-        <s-button type="round">info</s-button>
-        <s-button type="circle">success</s-button>
+        <s-button type="danger">danger</s-button>
+        <s-button type="plain">plain</s-button>
+        <s-button type="primary">primary</s-button>
         <s-button type="warning">warning</s-button>
-        <s-button type="disabled">danger</s-button>
+        <s-button type="success">success</s-button>
 
         <!-- <template v-slot:code>
         <pre v-highlightjs><code class="vue">{{code1}}</code></pre>
