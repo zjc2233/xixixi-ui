@@ -35,17 +35,27 @@ module.exports = {
             //     'views/design/color/',
             //   ]
             // },
-            // {
-            //   title: '组件',
-            //   collapsable: true,
-            //   children: [
-            //     'views/components/basic/',
-            //     'views/components/form/',
-            //     'views/components/navigation/',
-            //     'views/components/notice/',
-            //     'views/components/other/'
-            //   ]
-            // },
+            {
+              title: '组件',
+              collapsable: true,
+              children: [
+                {
+                    title: '基础',
+                    collapsable: false,
+                    path: 'views/components/basic/'
+                },
+                // {
+                //     title: '表单',
+                //     collapsable: false,
+                //     path: 'views/components/form/README.md'
+                // },
+                // 'views/components/basic/README.md',
+                // 'views/components/form/README.md',
+                // 'views/components/navigation/',
+                // 'views/components/notice/',
+                // 'views/components/other/'
+              ]
+            },
         ]
       },
     // scss:{ //配置 scss 根目录

@@ -52,3 +52,7 @@ export default {
   }
 }
 </script>
+<style lang='scss'>
+/* @import url('../theme/button.scss'); */
+
+</style>

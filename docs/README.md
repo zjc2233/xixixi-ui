@@ -7,5 +7,5 @@ actionLink: views/guide/install
 footer: Inspired by zjc
 ---
 <ClientOnly>
-  <sakura-home/>
+  <!-- <sakura-home/> -->
 </ClientOnly>
