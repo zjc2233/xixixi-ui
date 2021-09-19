@@ -1,18 +1,58 @@
 <template>
     <div>
         <h3>基础用法</h3>
-        <!-- <sakura-card> -->
-        <s-button>default</s-button>
-        <s-button type="danger">danger</s-button>
-        <s-button type="plain">plain</s-button>
-        <s-button type="primary">primary</s-button>
-        <s-button type="warning">warning</s-button>
-        <s-button type="success">success</s-button>
-
-        <!-- <template v-slot:code>
-        <pre v-highlightjs><code class="vue">{{code1}}</code></pre>
-      </template>     -->
-        <!-- </sakura-card> -->
+        <xxx-card>
+            <xxx-button>default</xxx-button>
+            <xxx-button type="primary">primary</xxx-button>
+            <xxx-button type="info">info</xxx-button>
+            <xxx-button type="success">success</xxx-button>
+            <xxx-button type="warning">warning</xxx-button>
+            <xxx-button type="danger">danger</xxx-button>
+            <p></p>
+            <xxx-button round >default</xxx-button>
+            <xxx-button round type="primary">primary</xxx-button>
+            <xxx-button round type="info">info</xxx-button>
+            <xxx-button round type="success">success</xxx-button>
+            <xxx-button round type="warning">warning</xxx-button>
+            <xxx-button round type="danger">danger</xxx-button>
+            <p></p>
+            <xxx-button circle >圆</xxx-button>
+            <xxx-button circle type="primary">圆</xxx-button>
+            <xxx-button circle type="info">圆</xxx-button>
+            <xxx-button circle type="success">圆</xxx-button>
+            <xxx-button circle type="warning">圆</xxx-button>
+            <xxx-button circle type="danger">圆</xxx-button>
+            <template v-slot:code>
+                <pre v-highlightjs><code class="vue">{{code1}}</code></pre>
+            </template> 
+        </xxx-card>
+        <h3>禁用状态</h3>
+        <xxx-card>
+            <xxx-button disabled >default</xxx-button>
+            <xxx-button disabled type="primary">primary</xxx-button>
+            <xxx-button disabled type="info">info</xxx-button>
+            <xxx-button disabled type="success">success</xxx-button>
+            <xxx-button disabled type="warning">warning</xxx-button>
+            <xxx-button disabled type="danger">danger</xxx-button>
+            <template v-slot:code>
+                <pre v-highlightjs><code class="vue">{{code2}}</code></pre>
+            </template> 
+        </xxx-card>
+        <h3>不同尺寸</h3>
+        <xxx-card>
+            <xxx-button>默认</xxx-button>
+            <xxx-button type="medium">中等</xxx-button>
+            <xxx-button type="small">小型</xxx-button>
+            <xxx-button type="mini">超小</xxx-button>
+            <p></p>
+            <xxx-button round>默认</xxx-button>
+            <xxx-button round type="medium">中等</xxx-button>
+            <xxx-button round type="small">小型</xxx-button>
+            <xxx-button round type="mini">超小</xxx-button>
+            <template v-slot:code>
+                <pre v-highlightjs><code class="vue">{{code3}}</code></pre>
+            </template> 
+        </xxx-card>
 
     </div>
 </template>
@@ -22,111 +62,56 @@ import btn from "../../../packages/button/button.vue";
 import Vue from "vue";
 import VueHighlightJS from "vue-highlightjs";
 
-// Tell Vue.js to use vue-highlightjs
 Vue.use(VueHighlightJS);
 export default {
     data() {
         return {
             code1: `
-      <s-button>default</s-button>
-      <s-button type="primary">primary</s-button>
-      <s-button type="info">info</s-button>
-      <s-button type="success">success</s-button>
-      <s-button type="warning">warning</s-button>
-      <s-button type="danger">danger</s-button>     
-       `
-                .replace(/^\s*/gm, "")
+<xxx-button>default</xxx-button>
+<xxx-button type="primary">primary</xxx-button>
+<xxx-button type="success">success</xxx-button>
+<xxx-button type="warning">warning</xxx-button>
+<xxx-button type="danger">danger</xxx-button>
+
+<xxx-button round >default</xxx-button>
+<xxx-button round type="primary">primary</xxx-button>
+<xxx-button round type="success">success</xxx-button>
+<xxx-button round type="warning">warning</xxx-button>
+<xxx-button round type="danger">danger</xxx-button>
+
+<xxx-button circle >圆</xxx-button>
+<xxx-button circle type="primary">圆</xxx-button>
+<xxx-button circle type="success">圆</xxx-button>
+<xxx-button circle type="warning">圆</xxx-button>
+<xxx-button circle type="danger">圆</xxx-button>    
+                `
+                .trim(),
+            code2: `
+<xxx-button disabled >default</xxx-button>
+<xxx-button disabled type="primary">primary</xxx-button>
+<xxx-button disabled type="success">success</xxx-button>
+<xxx-button disabled type="warning">warning</xxx-button>
+<xxx-button disabled type="danger">danger</xxx-button>   
+                `
+                .trim(),
+            code3: `
+<xxx-button>默认</xxx-button>
+<xxx-button type="medium">中等</xxx-button>
+<xxx-button type="small">小型</xxx-button>
+<xxx-button type="mini">超小</xxx-button>
+
+<xxx-button round>默认</xxx-button>
+<xxx-button round type="medium">中等</xxx-button>
+<xxx-button round type="small">小型</xxx-button>
+<xxx-button round type="mini">超小</xxx-button>  
+                `
                 .trim(),
         };
     },
     components: {
-        "s-button": btn,
-        // 's-button-group':btnGroup
+        "xxx-button": btn,
     },
 };
 </script>
-
-<style lang="scss" scoped>
-/* @import url('../../../packages/theme/button.scss'); */
-</style>
-<style>
-.hljs-comment,
-.hljs-quote {
-    color: #d4d0ab;
-}
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-    color: #ffa07a;
-}
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-    color: #f5ab35;
-}
-.hljs-attribute {
-    color: #ffd700;
-}
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-    color: #abe338;
-}
-.hljs-title,
-.hljs-section {
-    color: #00e0e0;
-}
-.hljs-keyword,
-.hljs-selector-tag {
-    color: #dcc6e0;
-}
-.hljs {
-    display: block;
-    overflow-x: auto;
-    background: #2b2b2b;
-    color: #f8f8f2;
-    padding: 0.5em;
-}
-.hljs-emphasis {
-    font-style: italic;
-}
-.hljs-strong {
-    font-weight: bold;
-}
-@media screen and (-ms-high-contrast: active) {
-    .hljs-addition,
-    .hljs-attribute,
-    .hljs-built_in,
-    .hljs-builtin-name,
-    .hljs-bullet,
-    .hljs-comment,
-    .hljs-link,
-    .hljs-literal,
-    .hljs-meta,
-    .hljs-number,
-    .hljs-params,
-    .hljs-string,
-    .hljs-symbol,
-    .hljs-type,
-    .hljs-quote {
-        color: highlight;
-    }
-    .hljs-keyword,
-    .hljs-selector-tag {
-        font-weight: bold;
-    }
-}
-</style>
 
 

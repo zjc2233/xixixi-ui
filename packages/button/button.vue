@@ -1,5 +1,5 @@
 <template>
-  <button class="xxx-button" :class="[`xxx-button--${type}`, {
+  <button class="xxx-button" :class="[`xxx-button--${type}`,`xxx-button--${size}`, {
     'is-plain': plain,
     'is-round': round,
     'is-circle': circle,
@@ -43,7 +43,11 @@ export default {
     disabled: {
       type: Boolean,
       default: false
-    }
+    },
+    size: {
+      type: String,
+      default: 'default'
+    },
   },
   methods: {
     handleClick (e) {
@@ -53,7 +57,6 @@ export default {
 }
 </script>
 <style lang='scss'>
-/* @import url('../theme/button.scss'); */
 .xxx-button {
     display: inline-block;
     line-height: 1;
@@ -212,13 +215,34 @@ export default {
     padding: 12px 23px;
   }
   
-  // 原形按钮
   .xxx-button.is-circle {
     border-radius: 50%;
     padding: 12px;
   }
+  .xxx-button.is-disabled {
+    &{
+      opacity: .7;
+    }
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+      background-image: none;
+    }
+  }
   
   .xxx-button [class*=xxx-icon-]+span {
       margin-left: 5px;
+  }
+  .xxx-button.xxx-button--medium {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .xxx-button.xxx-button--small {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+  .xxx-button.xxx-button--mini {
+    padding: 7px 15px;
+    font-size: 12px;
   }
 </style>

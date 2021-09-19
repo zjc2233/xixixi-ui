@@ -41,8 +41,20 @@ module.exports = {
               children: [
                 {
                     title: '基础',
-                    collapsable: false,
-                    path: 'views/components/basic/'
+                    collapsable: true,
+                    // path: 'views/components/basic/',
+                    children:[
+                      {
+                        title: '按钮',
+                        collapsable: false,
+                        path: 'views/components/basic/Button.md',
+                      },
+                      {
+                        title: '图标',
+                        collapsable: false,
+                        path: 'views/components/basic/Icon.md',
+                      },
+                  ]
                 },
                 // {
                 //     title: '表单',
