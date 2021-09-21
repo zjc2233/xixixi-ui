@@ -12,7 +12,7 @@
     props: {
       name: String,
       color: String,
-      size: Number,
+      size: [Number,String],
       showText:{
           type: Boolean,
           default: false

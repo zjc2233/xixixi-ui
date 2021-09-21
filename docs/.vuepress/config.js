@@ -74,6 +74,17 @@ module.exports = {
                       },
                   ]
                 },
+                {
+                    title: '其他',
+                    collapsable: false,
+                    children:[
+                      {
+                        title: 'dialog对话框',
+                        collapsable: false,
+                        path: 'views/components/other/Dialog.md',
+                      },
+                  ]
+                },
               ]
             },
         ]

@@ -2,7 +2,7 @@
   "name": "xixixi-ui",
   "version": "0.1.0",
   "private": false,
-  "main": "dist/xixixi-ui.umd.js",
+  "main": "dist/xixixi-ui.umd.min.js",
   "author": {
     "name": "zhaojuchang"
   },
@@ -38,6 +38,7 @@
     "lint-staged": "^9.5.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue-loader": "^14.2.4",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.8.2"
   },

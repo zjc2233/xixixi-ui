@@ -83,6 +83,13 @@ export default {
       default: false,
     },
   },
+  methods:{
+      handleChange() {
+      this.$nextTick(() => {
+        this.$emit('change', this.model);
+      });
+    }
+  }
 };
 </script>
 <style lang="scss">
