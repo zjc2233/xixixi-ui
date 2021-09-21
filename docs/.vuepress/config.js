@@ -53,15 +53,15 @@ module.exports = {
                     collapsable: false,
                     children:[
                       {
-                        title: '单选按钮',
+                        title: '单选框',
                         collapsable: false,
                         path: 'views/components/form/Radio.md',
                       },
-                      // {
-                      //   title: '图标',
-                      //   collapsable: false,
-                      //   path: 'views/components/basic/Icon.md',
-                      // },
+                      {
+                        title: '多选框',
+                        collapsable: false,
+                        path: 'views/components/form/Checkbox.md',
+                      },
                   ]
                 },
               ]
