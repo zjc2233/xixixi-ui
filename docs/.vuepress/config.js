@@ -67,6 +67,11 @@ module.exports = {
                         collapsable: false,
                         path: 'views/components/form/Switch.md',
                       },
+                      {
+                        title: 'input输入框',
+                        collapsable: false,
+                        path: 'views/components/form/Input.md',
+                      },
                   ]
                 },
               ]
