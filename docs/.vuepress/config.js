@@ -75,6 +75,17 @@ module.exports = {
                   ]
                 },
                 {
+                    title: '通知',
+                    collapsable: false,
+                    children:[
+                      {
+                        title: 'toast消息',
+                        collapsable: false,
+                        path: 'views/components/notice/toast.md',
+                      },
+                  ]
+                },
+                {
                     title: '其他',
                     collapsable: false,
                     children:[
