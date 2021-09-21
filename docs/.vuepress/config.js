@@ -28,13 +28,6 @@ module.exports = {
                   },
               ]
             },
-            // {
-            //   title: '设计',
-            //   collapsable: true,
-            //   children: [
-            //     'views/design/color/',
-            //   ]
-            // },
             {
               title: '组件',
               collapsable: true,
@@ -42,7 +35,6 @@ module.exports = {
                 {
                     title: '基础',
                     collapsable: true,
-                    // path: 'views/components/basic/',
                     children:[
                       {
                         title: '按钮',
@@ -56,16 +48,22 @@ module.exports = {
                       },
                   ]
                 },
-                // {
-                //     title: '表单',
-                //     collapsable: false,
-                //     path: 'views/components/form/README.md'
-                // },
-                // 'views/components/basic/README.md',
-                // 'views/components/form/README.md',
-                // 'views/components/navigation/',
-                // 'views/components/notice/',
-                // 'views/components/other/'
+                {
+                    title: '表单',
+                    collapsable: false,
+                    children:[
+                      {
+                        title: '单选按钮',
+                        collapsable: false,
+                        path: 'views/components/form/Radio.md',
+                      },
+                      // {
+                      //   title: '图标',
+                      //   collapsable: false,
+                      //   path: 'views/components/basic/Icon.md',
+                      // },
+                  ]
+                },
               ]
             },
         ]
