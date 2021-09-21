@@ -1,8 +1,8 @@
 {
   "id": "2824252",
   "name": "xixixi-ui",
-  "font_family": "iconfont",
-  "css_prefix_text": "icon-",
+  "font_family": "icon",
+  "css_prefix_text": "xxx-icon-",
   "description": "",
   "glyphs": [
     {

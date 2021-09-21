@@ -1,111 +1,111 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 2824252 */
-  src: url('iconfont.woff2?t=1632073980469') format('woff2'),
-       url('iconfont.woff?t=1632073980469') format('woff'),
-       url('iconfont.ttf?t=1632073980469') format('truetype');
+  font-family: "icon"; /* Project id 2824252 */
+  src: url('iconfont.woff2?t=1632110727459') format('woff2'),
+       url('iconfont.woff?t=1632110727459') format('woff'),
+       url('iconfont.ttf?t=1632110727459') format('truetype');
 }
 
-.iconfont {
-  font-family: "iconfont" !important;
+.icon {
+  font-family: "icon" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-custom-search:before {
+.xxx-icon-custom-search:before {
   content: "\e625";
 }
 
-.icon-share:before {
+.xxx-icon-share:before {
   content: "\e60a";
 }
 
-.icon-yin:before {
+.xxx-icon-yin:before {
   content: "\e608";
 }
 
-.icon-edit:before {
+.xxx-icon-edit:before {
   content: "\e68d";
 }
 
-.icon-goods:before {
+.xxx-icon-goods:before {
   content: "\e61b";
 }
 
-.icon-remove:before {
+.xxx-icon-remove:before {
   content: "\e602";
 }
 
-.icon-more:before {
+.xxx-icon-more:before {
   content: "\e64b";
 }
 
-.icon-moon:before {
+.xxx-icon-moon:before {
   content: "\e723";
 }
 
-.icon-phone:before {
+.xxx-icon-phone:before {
   content: "\e60b";
 }
 
-.icon-sunny:before {
+.xxx-icon-sunny:before {
   content: "\e660";
 }
 
-.icon-success:before {
+.xxx-icon-success:before {
   content: "\e73c";
 }
 
-.icon-user:before {
+.xxx-icon-user:before {
   content: "\e6e0";
 }
 
-.icon-warning:before {
+.xxx-icon-warning:before {
   content: "\e66b";
 }
 
-.icon-Settingscontroloptions:before {
+.xxx-icon-Settingscontroloptions:before {
   content: "\e9d3";
 }
 
-.icon-delete:before {
+.xxx-icon-delete:before {
   content: "\e61c";
 }
 
-.icon-folder-opened:before {
+.xxx-icon-folder-opened:before {
   content: "\e678";
 }
 
-.icon-error_3:before {
+.xxx-icon-error_3:before {
   content: "\e658";
 }
 
-.icon-star:before {
+.xxx-icon-star:before {
   content: "\e632";
 }
 
-.icon-ArrowLeft:before {
+.xxx-icon-ArrowLeft:before {
   content: "\e60f";
 }
 
-.icon-ArrowRight:before {
+.xxx-icon-ArrowRight:before {
   content: "\e612";
 }
 
-.icon-circle-remove:before {
+.xxx-icon-circle-remove:before {
   content: "\e600";
 }
 
-.icon-view:before {
+.xxx-icon-view:before {
   content: "\e601";
 }
 
-.icon-location-outline:before {
+.xxx-icon-location-outline:before {
   content: "\e9d4";
 }
 
-.icon-a-circleplus:before {
+.xxx-icon-a-circleplus:before {
   content: "\e796";
 }
 

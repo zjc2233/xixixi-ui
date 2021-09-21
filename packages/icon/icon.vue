@@ -1,5 +1,8 @@
 <template>
-  <i :class="'xxx-icon-' + name"></i>
+<div>
+  <i :class="['icon', 'xxx-icon-' + name]" :style="{color, 'font-size': size+'px'}"></i>
+  <span v-if="showText">{{name}}</span>
+</div>
 </template>
 
 <script>
@@ -7,7 +10,13 @@
     name: 'XxxIcon',
 
     props: {
-      name: String
-    }
+      name: String,
+      color: String,
+      size: Number,
+      showText:{
+          type: Boolean,
+          default: false
+      },
+    },
   };
 </script>

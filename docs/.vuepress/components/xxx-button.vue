@@ -16,12 +16,12 @@
             <xxx-button round type="warning">warning</xxx-button>
             <xxx-button round type="danger">danger</xxx-button>
             <p></p>
-            <xxx-button circle >圆</xxx-button>
-            <xxx-button circle type="primary">圆</xxx-button>
-            <xxx-button circle type="info">圆</xxx-button>
-            <xxx-button circle type="success">圆</xxx-button>
-            <xxx-button circle type="warning">圆</xxx-button>
-            <xxx-button circle type="danger">圆</xxx-button>
+            <xxx-button circle ><xxx-icon name="share" size="16" /></xxx-button>
+            <xxx-button circle type="primary"><xxx-icon name="share" size="16" /></xxx-button>
+            <xxx-button circle type="info"><xxx-icon name="share" size="16" /></xxx-button>
+            <xxx-button circle type="success"><xxx-icon name="share" size="16" /></xxx-button>
+            <xxx-button circle type="warning"><xxx-icon name="share" size="16" /></xxx-button>
+            <xxx-button circle type="danger"><xxx-icon name="share" size="16" /></xxx-button>
             <template v-slot:code>
                 <pre v-highlightjs><code class="vue">{{code1}}</code></pre>
             </template> 
@@ -59,6 +59,7 @@
 
 <script>
 import btn from "../../../packages/button/button.vue";
+import icon from "../../../packages/icon/icon.vue";
 import Vue from "vue";
 import VueHighlightJS from "vue-highlightjs";
 
@@ -79,11 +80,12 @@ export default {
 <xxx-button round type="warning">warning</xxx-button>
 <xxx-button round type="danger">danger</xxx-button>
 
-<xxx-button circle >圆</xxx-button>
-<xxx-button circle type="primary">圆</xxx-button>
-<xxx-button circle type="success">圆</xxx-button>
-<xxx-button circle type="warning">圆</xxx-button>
-<xxx-button circle type="danger">圆</xxx-button>    
+<xxx-button circle ><xxx-icon name="share" size="16" /></xxx-button>
+<xxx-button circle type="primary"><xxx-icon name="share" size="16" /></xxx-button>
+<xxx-button circle type="info"><xxx-icon name="share" size="16" /></xxx-button>
+<xxx-button circle type="success"><xxx-icon name="share" size="16" /></xxx-button>
+<xxx-button circle type="warning"><xxx-icon name="share" size="16" /></xxx-button>
+<xxx-button circle type="danger"><xxx-icon name="share" size="16" /></xxx-button>   
                 `
                 .trim(),
             code2: `
@@ -110,6 +112,7 @@ export default {
     },
     components: {
         "xxx-button": btn,
+        "xxx-icon": icon,
     },
 };
 </script>
