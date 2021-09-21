@@ -34,7 +34,7 @@ module.exports = {
               children: [
                 {
                     title: '基础',
-                    collapsable: true,
+                    collapsable: false,
                     children:[
                       {
                         title: '按钮',
@@ -61,6 +61,11 @@ module.exports = {
                         title: '多选框',
                         collapsable: false,
                         path: 'views/components/form/Checkbox.md',
+                      },
+                      {
+                        title: '开关',
+                        collapsable: false,
+                        path: 'views/components/form/Switch.md',
                       },
                   ]
                 },
