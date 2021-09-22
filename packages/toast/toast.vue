@@ -3,11 +3,9 @@
   <span>
     <div
       :class="[
-        'el-message',
-        type && !iconClass ? `el-message--${ type }` : '',
+        'xxx-message',
+        type && !iconClass ? `xxx-message--${ type }` : '',
         center ? 'is-center' : '',
-        showClose ? 'is-closable' : '',
-        customClass
       ]"
       :style="positionStyle"
       v-show="visible"
@@ -17,10 +15,10 @@
       <i :class="iconClass" v-if="iconClass"></i>
       <i :class="typeClass" v-else></i>
       <slot>
-        <p v-if="!dangerouslyUseHTMLString" class="el-message__content">{{ message }}</p>
-        <p v-else v-html="message" class="el-message__content"></p>
+        <p v-if="!dangerouslyUseHTMLString" class="xxx-message__content">{{ message }}</p>
+        <p v-else v-html="message" class="xxx-message__content"></p>
       </slot>
-      <i v-if="showClose" class="el-message__closeBtn icon xxx-icon-remove" @click="close"></i>
+      <i v-if="showClose" class="xxx-message__closeBtn icon xxx-icon-remove" @click="close"></i>
     </div>
   </span>
 </template>
@@ -45,7 +43,7 @@
         onClose: null,
         showClose: false,
         closed: false,
-        verticalOffset: 20,
+        verticalOffset: 80,
         timer: null,
         dangerouslyUseHTMLString: false,
         center: false
@@ -55,7 +53,7 @@
     computed: {
       typeClass() {
         return this.type && !this.iconClass
-          ? `el-message__icon el-icon-${ typeMap[this.type] }`
+          ? `xxx-message__icon xxx-icon-${ typeMap[this.type] }`
           : '';
       },
       positionStyle() {
@@ -72,7 +70,9 @@
         }
       }
     },
-
+    mounted() {
+      this.startTimer();
+    },
     methods: {
       handleAfterLeave() {
         this.$destroy(true);
@@ -104,14 +104,14 @@
 </script>
 
 <style lang="scss">
-.el-message {
+.xxx-message {
     min-width: 380px;
     box-sizing: border-box;
     border-radius: 4px;
     border: 1px solid #ebeef5;
     position: fixed;
     left: 50%;
-    top: 20px;
+    top: 80px;
     transform: translateX(-50%);
     background-color: #edf2fc;
     transition: opacity .3s,transform .4s,top .4s;
@@ -120,42 +120,42 @@
     display: flex;
     align-items: center;
 }
-.el-message--success {
+.xxx-message--success {
     background-color: #f0f9eb;
     border-color: #e1f3d8;
 }
-.el-message--warning {
+.xxx-message--warning {
     background-color: #fdf6ec;
     border-color: #faecd8;
 }
-.el-message--error {
+.xxx-message--error {
     background-color: #fef0f0;
     border-color: #fde2e2;
 }
-.el-message--success .el-message__content {
+.xxx-message--success .xxx-message__content {
     color: #67c23a;
 }
-.el-message .el-icon-warning {
+.xxx-message .xxx-icon-warning {
     color: #e6a23c;
 }
-.el-message--error .el-message__content {
+.xxx-message--error .xxx-message__content {
     color: #f56c6c;
 }
-.el-message .el-icon-info {
+.xxx-message .xxx-icon-info {
     color: #909399;
 }
-.el-message__content {
+.xxx-message__content {
     padding: 0;
     font-size: 14px;
     line-height: 1;
 }
-.el-message p {
+.xxx-message p {
     margin: 0;
 }
-.el-message__icon {
+.xxx-message__icon {
     margin-right: 10px;
 }
-[class*=" el-icon-"], [class^=el-icon-] {
+[class*=" xxx-icon-"], [class^=xxx-icon-] {
     font-family: element-icons!important;
     speak: none;
     font-style: normal;
@@ -167,5 +167,8 @@
     display: inline-block;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+.xxx-message.is-center{
+  text-align: center;
 }
 </style>

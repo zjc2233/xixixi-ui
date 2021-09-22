@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-    base:'/xixixi-ui/',
+    base:'/',
     title: 'xixixi UI',
     description: 'Inspiration from heian xixixi',
     head: [
@@ -14,7 +14,7 @@ module.exports = {
       sidebar: [
           {
               title: '开发指南',
-              collapsable: true,
+              collapsable: false,
               children: [
                   {
                       title: '安装',
@@ -30,7 +30,7 @@ module.exports = {
             },
             {
               title: '组件',
-              collapsable: true,
+              collapsable: false,
               children: [
                 {
                     title: '基础',

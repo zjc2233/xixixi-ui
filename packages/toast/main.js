@@ -9,6 +9,14 @@ let instance;
 let instances = [];
 let seed = 1;
 
+function isObject(obj) {
+  return Object.prototype.toString.call(obj) === '[object Object]';
+}
+
+function isVNode(node) {
+  return node !== null && typeof node === 'object' && hasOwn(node, 'componentOptions');
+};
+
 const Message = function(options) {
   if (Vue.prototype.$isServer) return;
   options = options || {};
@@ -27,13 +35,13 @@ const Message = function(options) {
     data: options
   });
   instance.id = id;
-//   if (isVNode(instance.message)) {
-//     instance.$slots.default = [instance.message];
-//     instance.message = null;
-//   }
+  if (isVNode(instance.message)) {
+    instance.$slots.default = [instance.message];
+    instance.message = null;
+  }
   instance.$mount();
   document.body.appendChild(instance.$el);
-  let verticalOffset = options.offset || 20;
+  let verticalOffset = options.offset || 80;
   instances.forEach(item => {
     verticalOffset += item.$el.offsetHeight + 16;
   });
@@ -46,12 +54,12 @@ const Message = function(options) {
 
 ['success', 'warning', 'info', 'error'].forEach(type => {
   Message[type] = (options) => {
-    // if (isObject(options) && !isVNode(options)) {
-    //   return Message({
-    //     ...options,
-    //     type
-    //   });
-    // }
+    if (isObject(options) && !isVNode(options)) {
+      return Message({
+        ...options,
+        type
+      });
+    }
     return Message({
       type,
       message: options
