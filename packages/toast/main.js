@@ -1,9 +1,6 @@
 import Vue from 'vue';
 import Toast from './toast.vue';
-// import { PopupManager } from 'element-ui/src/utils/popup';
-// import { isVNode } from 'element-ui/src/utils/vdom';
-// import { isObject } from 'element-ui/src/utils/types';
-let MessageConstructor = Vue.extend(Toast);
+let toastConstructor = Vue.extend(Toast);
 
 let instance;
 let instances = [];
@@ -17,33 +14,30 @@ function isVNode(node) {
   return node !== null && typeof node === 'object' && hasOwn(node, 'componentOptions');
 };
 
-const Message = function(options) {
+const toast = function(options) {
   if (Vue.prototype.$isServer) return;
   options = options || {};
   if (typeof options === 'string') {
     options = {
-      message: options
+      toast: options
     };
   }
-  let userOnClose = options.onClose;
-  let id = 'message_' + seed++;
+  // let userOnClose = options.onClose;
+  let id = 'toast_' + seed++;
 
-  options.onClose = function() {
-    Message.close(id, userOnClose);
-  };
-  instance = new MessageConstructor({
+  instance = new toastConstructor({
     data: options
   });
   instance.id = id;
-  if (isVNode(instance.message)) {
-    instance.$slots.default = [instance.message];
-    instance.message = null;
+  if (isVNode(instance.toast)) {
+    instance.$slots.default = [instance.toast];
+    instance.toast = null;
   }
   instance.$mount();
   document.body.appendChild(instance.$el);
   let verticalOffset = options.offset || 80;
   instances.forEach(item => {
-    verticalOffset += item.$el.offsetHeight + 16;
+    verticalOffset += item.$el.offsetHeight;
   });
   instance.verticalOffset = verticalOffset;
   instance.visible = true;
@@ -53,47 +47,19 @@ const Message = function(options) {
 };
 
 ['success', 'warning', 'info', 'error'].forEach(type => {
-  Message[type] = (options) => {
+  toast[type] = (options) => {
     if (isObject(options) && !isVNode(options)) {
-      return Message({
+      return toast({
         ...options,
         type
       });
     }
-    return Message({
+    return toast({
       type,
-      message: options
+      toast: options
     });
   };
 });
 
-Message.close = function(id, userOnClose) {
-  let len = instances.length;
-  let index = -1;
-  let removedHeight;
-  for (let i = 0; i < len; i++) {
-    if (id === instances[i].id) {
-      removedHeight = instances[i].$el.offsetHeight;
-      index = i;
-      if (typeof userOnClose === 'function') {
-        userOnClose(instances[i]);
-      }
-      instances.splice(i, 1);
-      break;
-    }
-  }
-  if (len <= 1 || index === -1 || index > instances.length - 1) return;
-  for (let i = index; i < len - 1 ; i++) {
-    let dom = instances[i].$el;
-    dom.style['top'] =
-      parseInt(dom.style['top'], 10) - removedHeight - 16 + 'px';
-  }
-};
 
-Message.closeAll = function() {
-  for (let i = instances.length - 1; i >= 0; i--) {
-    instances[i].close();
-  }
-};
-
-export default Message;
+export default toast;

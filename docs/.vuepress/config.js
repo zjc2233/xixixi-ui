@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
     base:'/',
     title: 'xixixi UI',
-    description: 'Inspiration from heian xixixi',
+    description: '一套基于vue2.X的组件库',
     head: [
       ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],

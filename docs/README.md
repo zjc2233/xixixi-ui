@@ -2,9 +2,9 @@
 home: true
 navbar: false
 heroImage: 
-actionText: Get Started →
+actionText: 快速开始
 actionLink: views/guide/install
-footer: Inspired by zjc
+footer: Inspired by xixixi
 ---
 <ClientOnly>
   <!-- <sakura-home/> -->

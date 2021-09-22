@@ -12,7 +12,7 @@ title: '快速上手'
 
 <script>
 import {Button} from 'xixixi-ui'
-import 'xixixi-ui/dist/xixixi.css'
+import 'xixixi-ui/dist/xixixi-ui.css'
 
 
 export default {

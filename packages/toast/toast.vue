@@ -3,8 +3,8 @@
   <span>
     <div
       :class="[
-        'xxx-message',
-        type && !iconClass ? `xxx-message--${ type }` : '',
+        'xxx-toast',
+        type && !iconClass ? `xxx-toast--${ type }` : '',
         center ? 'is-center' : '',
       ]"
       :style="positionStyle"
@@ -15,10 +15,10 @@
       <i :class="iconClass" v-if="iconClass"></i>
       <i :class="typeClass" v-else></i>
       <slot>
-        <p v-if="!dangerouslyUseHTMLString" class="xxx-message__content">{{ message }}</p>
-        <p v-else v-html="message" class="xxx-message__content"></p>
+        <p v-if="!dangerouslyUseHTMLString" class="xxx-toast__content">{{ toast }}</p>
+        <p v-else v-html="toast" class="xxx-toast__content"></p>
       </slot>
-      <i v-if="showClose" class="xxx-message__closeBtn icon xxx-icon-remove" @click="close"></i>
+      <i v-if="showClose" class="xxx-toast__closeBtn icon xxx-icon-remove" @click="close"></i>
     </div>
   </span>
 </template>
@@ -35,7 +35,7 @@
     data() {
       return {
         visible: false,
-        message: '',
+        toast: '',
         duration: 3000,
         type: 'info',
         iconClass: '',
@@ -53,7 +53,7 @@
     computed: {
       typeClass() {
         return this.type && !this.iconClass
-          ? `xxx-message__icon xxx-icon-${ typeMap[this.type] }`
+          ? `xxx-toast__icon icon xxx-icon-${typeMap[this.type]}`
           : '';
       },
       positionStyle() {
@@ -104,7 +104,7 @@
 </script>
 
 <style lang="scss">
-.xxx-message {
+.xxx-toast {
     min-width: 380px;
     box-sizing: border-box;
     border-radius: 4px;
@@ -120,39 +120,39 @@
     display: flex;
     align-items: center;
 }
-.xxx-message--success {
+.xxx-toast--success {
     background-color: #f0f9eb;
     border-color: #e1f3d8;
 }
-.xxx-message--warning {
+.xxx-toast--warning {
     background-color: #fdf6ec;
     border-color: #faecd8;
 }
-.xxx-message--error {
+.xxx-toast--error {
     background-color: #fef0f0;
     border-color: #fde2e2;
 }
-.xxx-message--success .xxx-message__content {
+.xxx-toast--success .xxx-toast__content {
     color: #67c23a;
 }
-.xxx-message .xxx-icon-warning {
+.xxx-toast .xxx-icon-warning {
     color: #e6a23c;
 }
-.xxx-message--error .xxx-message__content {
+.xxx-toast--error .xxx-toast__content {
     color: #f56c6c;
 }
-.xxx-message .xxx-icon-info {
+.xxx-toast .xxx-icon-info {
     color: #909399;
 }
-.xxx-message__content {
+.xxx-toast__content {
     padding: 0;
     font-size: 14px;
     line-height: 1;
 }
-.xxx-message p {
+.xxx-toast p {
     margin: 0;
 }
-.xxx-message__icon {
+.xxx-toast__icon {
     margin-right: 10px;
 }
 [class*=" xxx-icon-"], [class^=xxx-icon-] {
@@ -168,7 +168,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.xxx-message.is-center{
+.xxx-toast.is-center{
   text-align: center;
 }
 </style>

@@ -25,6 +25,7 @@ export default {
   data() {
     return {
       iconList: [
+        "info",
         "custom-search",
         "share",
         "yin",
