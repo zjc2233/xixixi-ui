@@ -37,12 +37,12 @@ module.exports = {
                     collapsable: false,
                     children:[
                       {
-                        title: '按钮',
+                        title: 'Button',
                         collapsable: false,
                         path: 'views/components/basic/Button.md',
                       },
                       {
-                        title: '图标',
+                        title: 'Icon',
                         collapsable: false,
                         path: 'views/components/basic/Icon.md',
                       },
@@ -53,33 +53,33 @@ module.exports = {
                     collapsable: false,
                     children:[
                       {
-                        title: '单选框',
+                        title: 'Radio',
                         collapsable: false,
                         path: 'views/components/form/Radio.md',
                       },
                       {
-                        title: '多选框',
+                        title: 'Checkbox',
                         collapsable: false,
                         path: 'views/components/form/Checkbox.md',
                       },
                       {
-                        title: '开关',
+                        title: 'Switch',
                         collapsable: false,
                         path: 'views/components/form/Switch.md',
                       },
                       {
-                        title: 'input输入框',
+                        title: 'Input',
                         collapsable: false,
                         path: 'views/components/form/Input.md',
                       },
                   ]
                 },
                 {
-                    title: '通知',
+                    title: 'toast',
                     collapsable: false,
                     children:[
                       {
-                        title: 'toast消息',
+                        title: 'toast',
                         collapsable: false,
                         path: 'views/components/notice/toast.md',
                       },
@@ -90,7 +90,7 @@ module.exports = {
                     collapsable: false,
                     children:[
                       {
-                        title: 'dialog对话框',
+                        title: 'Dialog',
                         collapsable: false,
                         path: 'views/components/other/Dialog.md',
                       },

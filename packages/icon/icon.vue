@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import '../fonts/iconfont.css'
   export default {
     name: 'XxxIcon',
 

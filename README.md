@@ -21,6 +21,6 @@ import {
   Button
   // ...
 } from 'xixixi-ui'
-Vue.component(Icon.name, Select)
+Vue.component(Icon.name, Icon)
 ```
 
