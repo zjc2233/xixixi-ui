@@ -13,6 +13,7 @@ import CheckboxGroup from './checkbox-group'
 import Form from './form'
 import FormItem from './form-item'
 import Icon from './icon'
+import Toast from './toast'
 import './fonts/iconfont.css'
 import './theme/index.scss'
 
@@ -29,6 +30,7 @@ const components = [
   Form,
   FormItem,
   Icon,
+  Toast,
 ]
 const install = function (Vue, options = {}) {
   // 全局注册所有的组件
