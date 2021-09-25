@@ -99,6 +99,11 @@ module.exports = {
                         collapsable: false,
                         path: 'views/components/other/Dialog.md',
                       },
+                      {
+                        title: 'Step',
+                        collapsable: false,
+                        path: 'views/components/other/Step.md',
+                      },
                   ]
                 },
               ]
