@@ -73,6 +73,11 @@ module.exports = {
                         path: 'views/components/form/Input.md',
                       },
                       {
+                        title: 'InputNmuber',
+                        collapsable: false,
+                        path: 'views/components/form/InputNmuber.md',
+                      },
+                      {
                         title: 'Select',
                         collapsable: false,
                         path: 'views/components/form/Select.md',

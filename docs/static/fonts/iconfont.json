@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "38747",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e6da",
+      "unicode_decimal": 59098
+    },
+    {
+      "icon_id": "1304875",
+      "name": "减",
+      "font_class": "sub",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
       "icon_id": "10147123",
       "name": "info",
       "font_class": "info",
