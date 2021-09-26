@@ -52,6 +52,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import url('../public/fonts/iconfont.css');
 .icon-list {
   display: flex;
   flex-wrap: wrap;

@@ -1,5 +1,5 @@
 # xixixi-ui
-<a href="http://120.26.75.150:8081/">
+<a href="https://xixixi.net.cn/">
     中文版介绍
 </a>
 
