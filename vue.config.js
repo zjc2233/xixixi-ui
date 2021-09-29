@@ -22,5 +22,12 @@ module.exports = {
       .tap(options => {
         return options
       })
+  },
+  configureWebpack: {
+    resolve:{
+      alias:{
+        '@pack': path.resolve(__dirname, 'packages'),
+      }
+    }
   }
 }
