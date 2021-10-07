@@ -57,6 +57,7 @@ export default {
 }
 </script>
 <style lang='scss'>
+@import url('../fonts/iconfont.css');
 .xxx-button {
     display: inline-block;
     line-height: 1;

@@ -21,3 +21,6 @@ import '../fonts/iconfont.css'
     },
   };
 </script>
+<style lang="scss">
+@import url('../fonts/iconfont.css');
+</style>
