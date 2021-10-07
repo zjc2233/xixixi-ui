@@ -14,6 +14,8 @@ import Form from './form'
 import FormItem from './form-item'
 import Icon from './icon'
 import Toast from './toast'
+import InputNumber from './input-number'
+import Select from './select'
 import './fonts/iconfont.css'
 import './theme/index.scss'
 
@@ -31,6 +33,8 @@ const components = [
   FormItem,
   Icon,
   Toast,
+  InputNumber,
+  Select
 ]
 const install = function (Vue, options = {}) {
   // 全局注册所有的组件
@@ -47,6 +51,18 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default {
-  install
-}
+export default {install}
+export { default as Button } from './button'
+export { default as Dialog } from './dialog'
+export { default as Input } from './input'
+export { default as Checkbox } from './checkbox'
+export { default as Radio } from './radio'
+export { default as RadioGroup } from './radio-group'
+export { default as Switch } from './switch'
+export { default as CheckboxGroup } from './checkbox-group'
+export { default as Form } from './form'
+export { default as FormItem } from './form-item'
+export { default as Icon } from './icon'
+export { default as Toast } from './toast'
+export { default as InputNumber } from './input-number'
+export { default as Select } from './select'
