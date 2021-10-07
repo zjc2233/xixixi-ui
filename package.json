@@ -8,7 +8,7 @@
   "scripts": {
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "test:jest": "jest --watch",
+    "test:jest": "jest tests --watchAll --no-cache",
     "lint": "vue-cli-service lint",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
