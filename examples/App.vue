@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-    <xxx-button type="primary">按钮</xxx-button>
+    <xxx-button circle type="primary"><xxx-icon name="share" size="16" /></xxx-button>
   </div>
 </template>
 
 <script>
-
 export default {
 }
 </script>
