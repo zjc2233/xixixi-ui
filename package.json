@@ -12,7 +12,7 @@
     "lint": "vue-cli-service lint",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
-    "lib": " node build/iconInit.js && vue-cli-service build --target lib packages/index.js",
+    "lib": "vue-cli-service build --target lib packages/index.js",
     "start": "vue-cli-service serve"
   },
   "main": "dist/xixixi-ui.umd.min.js",

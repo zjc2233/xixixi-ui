@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import "../../static/fonts/iconfont.css";
+import "../public/fonts/iconfont.css";
 import Switch from "../../../packages/switch/switch.vue";
 import Vue from "vue";
 import VueHighlightJS from "vue-highlightjs";

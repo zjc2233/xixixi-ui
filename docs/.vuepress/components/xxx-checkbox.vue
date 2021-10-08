@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import "../../static/fonts/iconfont.css";
+import "../public/fonts/iconfont.css";
 import checkbox from "../../../packages/checkbox/checkbox.vue";
 import checkboxGroup from "../../../packages/checkbox-group/checkbox-group.vue";
 import Vue from "vue";

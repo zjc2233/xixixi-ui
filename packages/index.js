@@ -16,7 +16,7 @@ import Icon from './icon'
 import Toast from './toast'
 import InputNumber from './input-number'
 import Select from './select'
-import './fonts/iconfont.css'
+import '../public/theme/font/iconfont.css'
 import './theme/index.scss'
 
 // 存储组件列表
@@ -51,7 +51,23 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default {install}
+export default {
+  install,
+  Button,
+  Dialog,
+  Input,
+  Checkbox,
+  Radio,
+  RadioGroup,
+  Switch,
+  CheckboxGroup,
+  Form,
+  FormItem,
+  Icon,
+  Toast,
+  InputNumber,
+  Select,
+}
 // export { default as Button } from './button'
 // export { default as Dialog } from './dialog'
 // export { default as Input } from './input'

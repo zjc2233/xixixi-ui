@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import '../fonts/iconfont.css'
+import '../../public/theme/font/iconfont.css'
   export default {
     name: 'XxxIcon',
 
@@ -22,5 +22,5 @@ import '../fonts/iconfont.css'
   };
 </script>
 <style lang="scss">
-@import url('../fonts/iconfont.css');
+@import url('../../public/theme/font/iconfont.css');
 </style>

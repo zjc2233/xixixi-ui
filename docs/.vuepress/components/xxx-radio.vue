@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import "../../static/fonts/iconfont.css";
+import "../public/fonts/iconfont.css";
 import radio from "../../../packages/radio/radio.vue";
 import radioGroup from "../../../packages/radio-group/radio-group.vue";
 import Vue from "vue";

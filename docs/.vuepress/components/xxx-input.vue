@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import "../../static/fonts/iconfont.css";
+import "../public/fonts/iconfont.css";
 import Input from "../../../packages/input/input.vue";
 import Vue from "vue";
 import VueHighlightJS from "vue-highlightjs";

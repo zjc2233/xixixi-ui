@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import "../../static/fonts/iconfont.css";
+import "../public/fonts/iconfont.css";
 import Select from "../../../packages/select/select.vue";
 import Option from "../../../packages/select/option.vue";
 import Vue from "vue";

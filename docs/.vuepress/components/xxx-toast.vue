@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import "../../static/fonts/iconfont.css";
+import "../public/fonts/iconfont.css";
 import Button from "../../../packages/button/button.vue";
 import Toast from "../../../packages/toast/index"
 import Vue from "vue";
