@@ -57,7 +57,7 @@ export default {
 }
 </script>
 <style lang='scss'>
-@import url('../../public/theme/font/iconfont.css');
+@import url('../../src/assets/fonts/iconfont.css');
 .xxx-button {
     display: inline-block;
     line-height: 1;

@@ -39,7 +39,7 @@
   </div>
 </template>
 <script>
-import '../../public/theme/font/iconfont.css'
+import '../../src/assets/fonts/iconfont.css'
 import XxxInput from '../input/input.vue';
 
   export default {

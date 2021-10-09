@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <xxx-button circle type="primary"><xxx-icon name="share" size="16" /></xxx-button>
+    <xxx-icon name='share' color="red" size="20" />
+    <i class="icon icon xxx-icon-sub"></i>
+    <i class="icon xxx-icon-add"></i>
   </div>
 </template>
 
@@ -10,6 +13,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('./assets/fonts/iconfont.css');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

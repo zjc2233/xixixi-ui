@@ -16,7 +16,7 @@ import Icon from './icon'
 import Toast from './toast'
 import InputNumber from './input-number'
 import Select from './select'
-import '../public/theme/font/iconfont.css'
+import '../src/assets/fonts/iconfont.css'
 import './theme/index.scss'
 
 // 存储组件列表

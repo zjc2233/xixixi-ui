@@ -1,15 +1,9 @@
 const path = require('path')
+const NODE_ENV = 'development' // 开发环境 打包doc
+// const NODE_ENV = 'lib' // 组件库 上传npm
 
-module.exports = {
+const devConfig = {
   lintOnSave: false,
-  pages: {
-    index: {
-      // 修改项目入口文件
-      entry: 'examples/main.js',
-      template: 'public/index.html',
-      filename: 'index.html'
-    }
-  },
   // 扩展webpack配置，使packages加入编译
   // 高版本js语法转为低版本
   chainWebpack: config => {
@@ -31,3 +25,18 @@ module.exports = {
     }
   }
 }
+
+const buildConfig = {
+  configureWebpack: {
+    entry: 'packages/index.js',
+    output: {
+      filename: '[name].js',
+      libraryTarget: 'commonjs2',
+    },
+  },
+  outputDir: 'lib',
+  productionSourceMap: false,
+  ...devConfig
+}
+
+module.exports = NODE_ENV === 'development' ? devConfig : buildConfig;
