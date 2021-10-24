@@ -156,7 +156,6 @@
     margin-right: 10px;
 }
 [class*=" xxx-icon-"], [class^=xxx-icon-] {
-    font-family: element-icons!important;
     speak: none;
     font-style: normal;
     font-weight: 400;

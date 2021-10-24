@@ -61,7 +61,6 @@
 </template>
 
 <script>
-import "../public/fonts/iconfont.css";
 import Input from "../../../packages/input/input.vue";
 import Vue from "vue";
 import VueHighlightJS from "vue-highlightjs";
@@ -149,6 +148,7 @@ data() {
 };
 </script>
 <style lang="scss">
+@import url('../public/fonts/iconfont.css');
 </style>
 
 

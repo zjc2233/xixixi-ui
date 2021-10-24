@@ -52,7 +52,6 @@
 </template>
 
 <script>
-import "../public/fonts/iconfont.css";
 import checkbox from "../../../packages/checkbox/checkbox.vue";
 import checkboxGroup from "../../../packages/checkbox-group/checkbox-group.vue";
 import Vue from "vue";
@@ -130,6 +129,7 @@ data () {
 };
 </script>
 <style lang="scss">
+@import url('../public/fonts/iconfont.css');
 </style>
 
 

@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import "../public/fonts/iconfont.css";
 import Select from "../../../packages/select/select.vue";
 import Option from "../../../packages/select/option.vue";
 import Vue from "vue";
@@ -87,6 +86,7 @@ data () {
 };
 </script>
 <style lang="scss">
+@import url('../public/fonts/iconfont.css');
 </style>
 
 

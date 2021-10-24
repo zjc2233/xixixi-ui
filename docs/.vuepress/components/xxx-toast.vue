@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import "../public/fonts/iconfont.css";
 import Button from "../../../packages/button/button.vue";
 import Toast from "../../../packages/toast/index"
 import Vue from "vue";
@@ -96,7 +95,7 @@ methods:{
 };
 </script>
 <style lang="scss">
-
+@import url('../public/fonts/iconfont.css');
 </style>
 
 

@@ -58,7 +58,6 @@
 </template>
 
 <script>
-import "../public/fonts/iconfont.css";
 import radio from "../../../packages/radio/radio.vue";
 import radioGroup from "../../../packages/radio-group/radio-group.vue";
 import Vue from "vue";
@@ -145,6 +144,7 @@ data () {
 };
 </script>
 <style lang="scss">
+@import url('../public/fonts/iconfont.css');
 </style>
 
 

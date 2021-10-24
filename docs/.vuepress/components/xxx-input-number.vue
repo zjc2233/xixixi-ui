@@ -32,7 +32,6 @@
 </template>
 
 <script>
-import "../public/fonts/iconfont.css";
 import InputNumber from "../../../packages/input-number/input-number.vue";
 import Vue from "vue";
 import VueHighlightJS from "vue-highlightjs";
@@ -95,6 +94,7 @@ data() {
 };
 </script>
 <style lang="scss">
+@import url('../public/fonts/iconfont.css');
 </style>
 
 

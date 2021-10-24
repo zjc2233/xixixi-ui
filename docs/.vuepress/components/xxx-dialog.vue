@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import "../public/fonts/iconfont.css";
 import Button from "../../../packages/button/button.vue";
 import Dialog from "../../../packages/dialog/dialog.vue";
 import Vue from "vue";
@@ -103,6 +102,7 @@ data() {
 };
 </script>
 <style lang="scss">
+@import url('../public/fonts/iconfont.css');
 </style>
 
 

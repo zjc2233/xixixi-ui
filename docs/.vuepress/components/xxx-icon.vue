@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import "../public/fonts/iconfont.css";
 import icon from "../../../packages/icon/icon.vue";
 import Vue from "vue";
 import VueHighlightJS from "vue-highlightjs";
