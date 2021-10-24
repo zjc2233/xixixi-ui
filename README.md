@@ -5,7 +5,7 @@
 
 ## Install
 ```
-npm install xixixi-ui -D
+npm install xixixi-ui -S
 ```
 ## 快速开始
 
